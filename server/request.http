@@ -2,7 +2,7 @@ GET http://localhost:5000/
 
 
 ###
-POST  http://localhost:5000/api/auth/register
+POST  https://desolate-coast-01000-b0f7404eccf5.herokuapp.com/api/auth/register
 Content-Type: application/json
 
 {
