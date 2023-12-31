@@ -1,0 +1,60 @@
+GET http://localhost:5000/
+
+
+###
+POST  http://localhost:5000/api/auth/register
+Content-Type: application/json
+
+{
+    "username":"hoangnhat1",
+    "password":"123"
+}
+
+###
+
+POST http://localhost:5000/api/auth/login
+Content-Type: application/json
+
+{
+    "username":"hoangnhat",
+    "password":"123"
+}
+
+###
+GET http://localhost:5000/api/getUser
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NTE3OTExMDhjZDg4MzAyZWMwZDBiZjMiLCJpYXQiOjE2OTkyNDA0ODJ9.x8ildWWr6Fvqf8Wmak1Tkl_u274RRSOzmjDprgtGUpQ
+###
+
+POST http://localhost:5000/api/post
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NTE3OTExMDhjZDg4MzAyZWMwZDBiZjMiLCJpYXQiOjE2OTkyNDA0ODJ9.x8ildWWr6Fvqf8Wmak1Tkl_u274RRSOzmjDprgtGUpQ
+
+{
+    "title":"aa",
+    "description":"test",
+    "url":"https://www.youtube.com/",
+    "status":"LEARNING",
+    "user": "6517e365f6c64e2f54b2aff5"
+}
+###
+
+GET http://localhost:5000/api/post
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NTE3OTExMDhjZDg4MzAyZWMwZDBiZjMiLCJpYXQiOjE2OTg5OTg2MTF9.1hD8_A8cRpNIVr12gBqiF7v8sbXEfGeGYQUdQeNsXQM
+
+###
+PUT http://localhost:5000/api/post/6517cdbebf092207d0bd677f
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpYXQiOjE2OTYwNTg4NzF9.uovxR3OeqeKtnh0uWSTnVNAKQmQriF4vo06tA4ESBXQ
+
+{
+    "title": "Vue",
+    "description": "vuee",
+    "url": "vue.org",
+    "status": "LEARNING"
+}
+
+###
+DELETE http://localhost:5000/api/post/6549cec8aff58513e0ea9c8e
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpYXQiOjE2OTYwNTg4NzF9.uovxR3OeqeKtnh0uWSTnVNAKQmQriF4vo06tA4ESBXQ

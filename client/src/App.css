@@ -1,0 +1,245 @@
+.landing {
+	position: relative;
+	background: url('./assets/landing.jpg') no-repeat center center/cover;
+	height: 100vh;
+}
+
+.dark-overlay {
+	background-color: rgba(0, 0, 0, 0.5);
+	height: 100%;
+}
+
+.landing-inner {
+	height: 100%;
+	margin: auto;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	text-align: center;
+}
+
+.landing-inner form {
+	width: 30%;
+}
+
+.landing-inner h1,
+.landing-inner h4,
+.landing-inner p {
+	color: white;
+}
+
+.spinner-container {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	-moz-transform: translateX(-50%) translateY(-50%);
+	-webkit-transform: translateX(-50%) translateY(-50%);
+	transform: translateX(-50%) translateY(-50%);
+}
+
+/* Post button */
+.post-button {
+	padding-top: 0;
+	background: transparent;
+	border: none;
+}
+
+.post-button:hover {
+	background: transparent;
+}
+
+a.post-button.btn:focus,
+a.post-button.btn:active {
+	outline: none;
+	background: transparent;
+	border: none;
+	box-shadow: none;
+}
+
+button.post-button.btn:focus,
+button.post-button.btn:active {
+	outline: none;
+	background: transparent;
+	border: none;
+	box-shadow: none;
+}
+
+/* Floating add button */
+.btn-floating {
+	position: fixed;
+	right: 3rem;
+	bottom: 3rem;
+	background: transparent;
+	border: none;
+}
+
+.btn-floating:hover {
+	background: transparent;
+}
+
+.btn-floating:focus,
+.btn-floating:active {
+	outline: none;
+	background: transparent;
+	border: none;
+	box-shadow: none;
+}
+
+/* Add new post tooltip */
+.tooltip {
+	background: transparent;
+}
+
+.tooltip .arrow::before {
+	border-left-color: #78c2ad;
+}
+
+.tooltip-inner {
+	background: #78c2ad;
+}
+
+/* Post border thicker */
+.border-success,
+.border-warning,
+.border-danger {
+	border-width: 2px;
+}
+
+/* Post title */
+.post-title {
+	margin-bottom: 0.5rem;
+}
+.card-list{
+	margin-top: 20px;
+	display: flex;
+	justify-content: space-around;
+	flex-wrap: wrap;
+	gap: 10px;
+}
+.card{
+	background: yellowgreen;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  padding: 20px;
+  margin: 10px;
+  width: 250px;
+  display: inline-block;
+  text-align: left;
+  transition: transform 0.2s;
+}
+.card:hover {
+	transform: scale(1.05);
+  }
+.card h2 {
+	font-size: 30px;
+	margin: 0;
+	color: brown;
+	text-align: center;
+	font-weight: bold;
+  }
+.card p {
+	font-size: 14px;
+	margin: 10px 0;
+	color: Gray;
+	font-weight: bold;
+  }
+ 
+
+.card .status {
+	font-size: 12px;
+	color: gray;
+	margin-top: 10px;
+	font-weight: bold;
+  }
+.add{
+	margin-top: 10px;
+	margin-left: 34px;
+}
+.add-card{
+	background-color: #3498db; /* Màu nền của button */
+	color: #fff; /* Màu chữ trên button */
+	border: none; /* Loại bỏ đường viền */
+	padding: 10px 20px; /* Kích thước của button */
+	border-radius: 5px; /* Bo tròn các góc của button */
+	cursor: pointer; /* Biến con trỏ thành dấu tay khi di chuột vào button */
+	font-size: 16px;
+	&:hover{
+		background-color: #217dbb;
+	}
+}
+.overlay {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background: rgba(0, 0, 0, 0.5); /* Một lớp mờ màu xám đậm */
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	z-index: 1000; /* Đảm bảo form đè lên các phần khác */
+  }
+  /* CSS cho form container */
+.form-container {
+	background: #ffffff;
+	box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+	padding: 20px;
+	border-radius: 10px;
+	max-width: 400px;
+	margin: 0 auto;
+  }
+  
+  /* CSS cho label */
+  .form-container label {
+	display: block;
+	margin-bottom: 10px;
+	font-weight: bold;
+	color: #333;
+  }
+  
+  /* CSS cho input fields */
+  .form-container input {
+	width: 100%;
+	padding: 10px;
+	margin-bottom: 15px;
+	border: 1px solid #ccc;
+	border-radius: 5px;
+	outline: none;
+	font-size: 16px;
+  }
+  
+  /* CSS cho buttons */
+ .buttons {
+	background-color: #007BFF;
+	color: #fff;
+	padding: 10px 20px;
+	border: none;
+	border-radius: 5px;
+	cursor: pointer;
+	margin-right: 10px;
+  }
+  
+  .buttons:hover {
+	background-color: #0056b3;
+  }
+  .close-btn{
+	background-color: red;
+	color: #fff;
+	padding: 10px 20px;
+	border: none;
+	border-radius: 5px;
+	cursor: pointer;
+	margin-right: 10px;
+  }
+.close-btn:hover {
+	background-color: rgb(187, 23, 23);
+  }
+.delete-card-btn{
+	float: right;
+	border: 0px;
+	border-radius: 10px;
+	font-weight: bold;
+	background-color: rgb(193, 51, 51);
+	color: white;
+}
