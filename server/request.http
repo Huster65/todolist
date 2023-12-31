@@ -2,7 +2,7 @@ GET http://localhost:5000/
 
 
 ###
-POST  https://desolate-coast-01000-b0f7404eccf5.herokuapp.com/api/auth/register
+POST  https://first-app01-c4c37b310a28.herokuapp.com/api/auth/register
 Content-Type: application/json
 
 {
@@ -12,11 +12,11 @@ Content-Type: application/json
 
 ###
 
-POST http://localhost:5000/api/auth/login
+POST https://first-app01-c4c37b310a28.herokuapp.com/api/auth/login
 Content-Type: application/json
 
 {
-    "username":"hoangnhat",
+    "username":"nhat",
     "password":"123"
 }
 
@@ -26,12 +26,12 @@ Content-Type: application/json
 Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NTE3OTExMDhjZDg4MzAyZWMwZDBiZjMiLCJpYXQiOjE2OTkyNDA0ODJ9.x8ildWWr6Fvqf8Wmak1Tkl_u274RRSOzmjDprgtGUpQ
 ###
 
-POST http://localhost:5000/api/post
+POST https://first-app01-c4c37b310a28.herokuapp.com/api/post
 Content-Type: application/json
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NTE3OTExMDhjZDg4MzAyZWMwZDBiZjMiLCJpYXQiOjE2OTkyNDA0ODJ9.x8ildWWr6Fvqf8Wmak1Tkl_u274RRSOzmjDprgtGUpQ
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NTE3ZTM2NWY2YzY0ZTJmNTRiMmFmZjUiLCJpYXQiOjE3MDQwNDc1NjB9.PhkseGjwPDZHTogrZ2FLGSQz7AfTqdt7-K9Ub1JeXMI
 
 {
-    "title":"aa",
+    "title":"123",
     "description":"test",
     "url":"https://www.youtube.com/",
     "status":"LEARNING",

@@ -7,6 +7,8 @@ import styles from './views.module.scss'
 import classNames from "classnames/bind"
 import { useHistory } from 'react-router-dom';
 import axios from 'axios';
+import { apiUrl, LOCAL_STORAGE_TOKEN_NAME } from "../contexts/contants";
+
 const cx = classNames.bind(styles)
 
 function Navbarr() {
@@ -23,7 +25,7 @@ function Navbarr() {
       
       const token = localStorage.getItem('learnit-mern')
       try{
-        const res = await axios.get('http://localhost:5000/api/getUser',{
+        const res = await axios.get(`${apiUrl}/getUser`,{
           headers: {
             Authorization: `Bearer ${token}`,
           }

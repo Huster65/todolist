@@ -1,7 +1,7 @@
 import React from "react";
 import { useState } from "react";
 import axios from "axios";
-
+import { apiUrl, LOCAL_STORAGE_TOKEN_NAME } from "../contexts/contants";
 function AddCard() {
     //state
     const [isFormVisible, setIsFormVisible] = useState(false);
@@ -12,7 +12,7 @@ function AddCard() {
         status: '',
 
     })
-    const token = localStorage.getItem('learnit-mern');
+    const token = localStorage.getItem(LOCAL_STORAGE_TOKEN_NAME);
     const config = {
         headers: {
           Authorization: `Bearer ${token}`
@@ -25,7 +25,7 @@ function AddCard() {
     const handleSubmit = async (e) => {
         e.preventDefault();
         try{
-            const response = await axios.post('http://localhost:5000/api/post',formData,config)
+            const response = await axios.post(`${apiUrl}/post`,formData,config)
             console.log('Dữ liệu đã được gửi thành công:', response.data);
 
             setFormData({

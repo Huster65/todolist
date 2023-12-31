@@ -1,9 +1,11 @@
 import LoginForm from "../components/auth/loginForm"
 import RegisterForm from "../components/auth/registerForm"
 import { Redirect } from "react-router-dom"
+import { apiUrl, LOCAL_STORAGE_TOKEN_NAME } from "../contexts/contants";
+
 
 const Auth = ({authRoute}) => {
-    const accesstoken = localStorage.getItem('learnit-mern')
+    const accesstoken = localStorage.getItem(LOCAL_STORAGE_TOKEN_NAME)
     let body
 
     if (accesstoken)

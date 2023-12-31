@@ -1,14 +1,15 @@
 import axios from "axios";
 import React from "react";
 import { Link } from "react-router-dom";
+import { apiUrl, LOCAL_STORAGE_TOKEN_NAME } from "../contexts/contants";
 
 function Card({ id ,title, description, link, status }) {
 
-    const tokens = localStorage.getItem('learnit-mern')
+    const tokens = localStorage.getItem(LOCAL_STORAGE_TOKEN_NAME)
     
     const deleteFunction = async () => {
         try{
-            axios.delete(`http://localhost:5000/api/post/${id}`,{
+            axios.delete(`${apiUrl}/post/${id}`,{
                 headers:{
                     Authorization: `Bearer ${tokens}`
                 }
